@@ -20,10 +20,14 @@
             position: relative;
         }
 
+        .search-input {
+            padding: 8px;
+            margin-right: 8px;
+            border: none;
+            border-radius: 4px;
+        }
+
         .search-button {
-            position: absolute;
-            top: 10px;
-            right: 10px;
             background-color: #fff;
             padding: 8px 12px;
             border: none;
@@ -45,6 +49,7 @@
             background-color: #fff;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
         }
 
         .channel img {
@@ -66,12 +71,12 @@
 <body>
   <header>
         <h1>Live TV</h1>
-        <input type="text" id="searchInput" placeholder="Search...">
+        <input type="text" id="searchInput" class="search-input" placeholder="Search...">
         <button class="search-button" onclick="handleSearch()">Search</button>
     </header>
 
     <main>
-        <div class="channel">
+        <div class="channel" data-name="Star sports 1 tamil HD 1">
             <a href="Starsports1 Tamil.html">
                 <h2>Star sports 1 tamil hd</h2>
                 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGTu88xW0ZHm7-rlWDdkMfRw0YMOBHTlnWRw&usqp=CAU" alt="Star sports 1 tamil">
@@ -79,7 +84,7 @@
             </a>
         </div>
 
-        <div class="channel">
+        <div class="channel" data-name=" Sports 18 HD">
             <a href="Sports 18 HD.html">
                 <h2>Sports 18 HD</h2>
                 <img src="https://tatalogo.pages.dev/1033.png" alt="Channel 2">
@@ -87,7 +92,7 @@
             </a>
         </div>
        
-              <div class="channel">
+              <div class="channel" data-name="Star sports 1 HD">
             <a href="Star sports 1 HD.html">
                 <h2>Star sports 1 HD</h2>
                 <img src="https://tatalogo.pages.dev/78.png" alt="Channel 2">
@@ -95,7 +100,7 @@
             </a>
         </div>
       
-        <div class="channel">
+        <div class="channel" data-name="Star sports 2 HD">
             <a href="Star sports 2 HD.html">
                 <h2>Star sports 2 Hd</h2>
                 <img src="https://tatalogo.pages.dev/235.png" alt="Channel 2">
@@ -103,7 +108,7 @@
             </a>
         </div>
       
-      <div class="channel">
+      <div class="channel" data-name="Colours HD">
             <a href="colours HD.html">
                 <h2>Colours HD</h2>
                 <img src="https://tatalogo.pages.dev/52.png" alt="Channel 2">
@@ -111,7 +116,7 @@
             </a>
         </div>
       
-       <div class="channel">
+       <div class="channel" data-name="Star sports 1 SD">
             <a href="Sp 1 sd.html">
                 <h2>Star sports 1 SD</h2>
                 <img src="https://tatalogo.pages.dev/78.png" alt="Channel 2">
@@ -119,15 +124,15 @@
             </a>
         </div>
        
-       <div class="channel">
+       <div class="channel" data-name="Sun tv SD">
             <a href="Sun tv SD.html">
                 <h2>Sun tv SD</h2>
                 <img src="https://tatalogo.pages.dev/521.png" alt="Channel 2">
-                <p> Sun tv </p>
+                <p> Sun tv SD </p>
             </a>
         </div>
       
-       <div class="channel">
+       <div class="channel" data-name="Flowers tv">
             <a href="Flowers tv.html">
                 <h2> Flowers tv</h2>
                 <img src="https://tatalogo.pages.dev/10.png" alt="Channel 2">
@@ -135,7 +140,7 @@
             </a>
         </div>
       
-      <div class="channel">
+      <div class="channel" data-name="Chutti tv">
             <a href="chutti tv.html">
                 <h2> Chutti tv</h2>
                 <img src="https://te.legra.ph/file/6b8910e5b6c88b0bcfb1e.jpg" alt="Channel 2">
@@ -143,7 +148,7 @@
             </a>
         </div>
       
-      <div class="channel">
+      <div class="channel" data-name="Sun news">
             <a href="Sun news.html">
                 <h2> Sun news</h2>
                 <img src="https://i.imgur.com/mQWpBdv.png" alt="Channel 2">
@@ -151,7 +156,7 @@
             </a>
         </div>
       
-      <div class="channel">
+      <div class="channel" data-name="Disney channel">
             <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=114">
                 <h2> Disney channel</h2>
                 <img src="https://tatalogo.pages.dev/114.png" alt="Channel 2">
@@ -159,7 +164,7 @@
             </a>
       </div>
       
-      <div class="channel">
+      <div class="channel" data-name="zee thirai">
             <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=797">
                 <h2>zee thirai</h2>
                 <img src="https://tatalogo.pages.dev/797.png" alt="Channel 2">
@@ -167,7 +172,7 @@
             </a>
         </div>
       
-      <div class="channel">
+      <div class="channel" data-name="pogo">
             <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=239">
                 <h2>Pogo</h2>
                 <img src="https://tatalogo.pages.dev/239.png" alt="Channel 2">
@@ -175,7 +180,7 @@
             </a>
         </div>
       
-      <div class="channel">
+      <div class="channel" data-name="zee tamil">
             <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=608">
                 <h2> Zee tamil</h2>
                 <img src="https://tatalogo.pages.dev/608.png" alt="Channel 2">
@@ -183,15 +188,52 @@
             </a>
         </div>
       
-      <div class="channel">
+      <div class="channel" data-name="Star vijay HD">
             <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=496">
                 <h2>Star vijay HD</h2>
                 <img src="https://tatalogo.pages.dev/496.png" alt="Channel 2">
                 <p> Star vijay HD </p>
             </a>
         </div>
+      
+      <div class="channel" data-name="Sun tv HD">
+            <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=521">
+                <h2>Sun tv HD</h2>
+                <img src="https://tatalogo.pages.dev/521.png" alt="Channel 2">
+                <p> Sun tv HD </p>
+            </a>
+        </div>
+      
+      <div class="channel" data-name="Cartoon network">
+            <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=238">
+                <h2>Cartoon network</h2>
+                <img src="https://tatalogo.pages.dev/238.png" alt="Channel 2">
+                <p> Cartoon network </p>
+            </a>
+        </div>
+      
+      <div class="channel" data-name="Cartoon network">
+            <a href="https://denverishere.github.io/Denver.github.io/TP/Player.html?id=238">
+                <h2>Cartoon network</h2>
+                <img src="https://tatalogo.pages.dev/238.png" alt="Channel 2">
+                <p> Cartoon network </p>
+            </a>
+        </div>
         <!-- Add more channels as needed -->
 
     </main>
+  
+  <script>
+        function handleSearch() {
+            var input = document.getElementById("searchInput").value.toLowerCase();
+            var channels = document.querySelectorAll('.channel');
+
+            channels.forEach(function(channel) {
+                var channelName = channel.getAttribute('data-name').toLowerCase();
+                var channelDisplay = channelName.includes(input) ? 'block' : 'none';
+                channel.style.display = channelDisplay;
+            });
+        }
+    </script>
 </body>
 </html>
